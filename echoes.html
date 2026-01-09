@@ -32,39 +32,175 @@
 
     <section class="projects">
       <div class="container">
-        <h2>Semester Reflections</h2>
+        <h2>Semester Summary - Learning Outcomes</h2>
 
         <div class="semester-grid">
           <article class="semester-card" aria-labelledby="sem1">
             <div class="semester-title">
-              <h3 id="sem1">Semester 1 — Foundations</h3>
+              <h3 id="sem1">Sprint 1 — Foundations</h3>
             </div>
-            <p class="semester-meta">Focus: planning, research, prototypes.</p>
-            <p>Established goals, researched tech stack and built early prototypes to validate architecture and scope for Echoes from the Shadows.</p>
+            <p class="semester-meta">Planning, Research, Prototypes.</p>
+            <p>During sprint 1, I aim to investigate which hardware and software are required to create a working MVP for Society 5.0, so that the involved stakeholders gain insight into the unethical aspects of eavesdropping equipment. 
+                The goal is to raise awareness of how easy it is to be monitored without being noticed.
+                During sprint 1, I focused on developing hardware and writing code for a specific piece of hardware, in this case the ESP32-CAM module. For this, I used the Arduino IDE, which allowed me to write and upload software to the device.
+                To actually obtain the video feed, I built a dashboard myself with an integrated network scanner that retrieves the IP and MAC addresses of the device, as well as those of other devices on the network.
+                I did this to make the system easy to use for users. I acquired this knowledge by reading the documentation of the module and the Arduino IDE, and by watching YouTube videos to see how others approached this.
+            </p>
           </article>
 
           <article class="semester-card" aria-labelledby="sem2">
             <div class="semester-title">
-              <h3 id="sem2">Semester 2 — Development</h3>
+              <h3 id="sem2">Sprint 2 — Development</h3>
             </div>
             <p class="semester-meta">Focus: core features, CI, iteration.</p>
-            <p>Implemented core functionality, set up version control and CI, and iterated using feedback to improve reliability and modularity.</p>
+            <p>
+                During sprint 2, I wanted to further develop my knowledge of hardware and networking.
+                To achieve this, I completed several courses and obtained certifications.
+                This knowledge helped me better understand how the project works, as I am directly
+                dealing with hardware and networks. In addition to the courses I completed,
+                I also focused more on security and privacy.
+            </p>
+
+            <p>
+                For example, the camera streams over a network, meaning that anyone on the same
+                network can view the live camera feed. Based on this knowledge, I implemented
+                a stream pool. I learned this through the courses, as it was not possible to
+                display multiple streams on a single dashboard because that would require
+                multiple processes, which does not work.
+            </p>
+
+            <p>
+                Once an IP address is added to the stream pool, the camera stream can no longer
+                be accessed directly via the camera’s IP address. As a result, the live feed
+                can only be viewed on the device that registered the IP address in the stream pool.
+            </p>
           </article>
 
           <article class="semester-card" aria-labelledby="sem3">
             <div class="semester-title">
-              <h3 id="sem3">Semester 3 — Polish & UX</h3>
+              <h3 id="sem3">Sprint 3 — Polish & UX</h3>
             </div>
             <p class="semester-meta">Focus: UX, accessibility, performance.</p>
-            <p>Refined UI, improved accessibility, and optimized load/performance; adjusted interactions based on usability testing.</p>
+            <p>
+                During sprint 3, I want to fully focus on developing the front-end and back-end
+                of my project. After gaining more insight into networking and hardware in the
+                previous sprint, it is now time to translate this technical foundation into software.
+            </p>
+
+            <p>
+                To further shape my “Dark Tech” studio, I will learn how to design a modern interface
+                and how to build a stable back-end that supports my application. My goal is to
+                establish an initial working connection between both components, providing the
+                project with a solid software foundation.
+            </p>
+
+            <h3>Step 1 – Creating a “Dark” and “Light” version</h3>
+            <ul>
+                <li>Develop two front-end themes: one dark-themed and one light-themed.</li>
+                <li>Refine the “Dark” theme based on the Figma designs.</li>
+                <li>Design a consistent user interface for both variants.</li>
+            </ul>
+
+            <h3>Step 2 – Connecting LED lighting to the dashboard</h3>
+            <ul>
+                <li>Build back-end functionality to control LED lighting.</li>
+                <li>Add front-end controls (on/off, color, intensity).</li>
+                <li>Test communication between the dashboard and the hardware.</li>
+            </ul>
+
+            <h3>Step 3 – Testing and improving based on user experience</h3>
+            <ul>
+                <li>Conduct testing sessions with users.</li>
+                <li>Collect feedback on usability, clarity, and themes.</li>
+                <li>Implement improvements in design and functionality.</li>
+            </ul>
+
+            <h3>Contributing to the Advisory Report</h3>
+            <p>
+                In addition to developing the front-end and back-end, I will also contribute
+                to creating an advisory report during this sprint. This report supports the
+                project by providing insight into design choices, solution directions, and
+                key considerations.
+            </p>
+
+            <p>
+                My role is to think along, gather information, and present it clearly and in a
+                structured manner. I will mainly focus on analyzing the current situation at
+                both the software and hardware level, researching possible solutions, and
+                clearly formulating recommendations.
+            </p>
+            <img src="Dark.png" alt="Dark Dashboard Design Preview" class="semester-image" />
+            <img src="Light.png" alt="Light Dashboard Design Preview" class="semester-image" />
+
           </article>
 
           <article class="semester-card" aria-labelledby="sem4">
             <div class="semester-title">
-              <h3 id="sem4">Semester 4 — Reflection</h3>
+              <h3 id="sem4">Sprint 4 — Reflection and Future Plans</h3>
             </div>
             <p class="semester-meta">Focus: documentation, retrospectives, next steps.</p>
-            <p>Compiled documentation, wrote technical retrospectives, and planned future enhancements and research directions.</p>
+                <p>
+                    During sprint 3, I wanted to fully focus on the development of the front-end and
+                    back-end of my project. Because I gained more insight into networking and hardware
+                    during sprint 2, it was time to translate this technical foundation into software –
+                    which I successfully did. During this sprint, I implemented both the “Dark” and
+                    “Light” dashboards, along with the facial recognition algorithm.
+                </p>
+
+                <p>
+                    In addition to implementing the Figma designs into the application, I improved
+                    the video streams by adding better error handling. This makes it clearer what
+                    goes wrong when the camera is not running, for example errors such as
+                    “TCP gateway error”.
+                </p>
+
+                <p>
+                    Because ethics are central to the “Light” dashboard, facial recognition was
+                    deliberately not implemented in this version. Instead, a feature was added
+                    that allows all JavaScript scripts to be disabled using a single button on
+                    the right side of the dashboard. This ensures that users can no longer interact
+                    with the dashboard until the page is refreshed.
+                </p>
+
+                <p>
+                    On the “Dark” dashboard, users are able to take screenshots of the video stream
+                    and process them using an algorithm that detects faces and trousers on an
+                    individual. These images are stored within the project itself, allowing users
+                    to select which images they want to view and from which date directly within
+                    the dashboard.
+                </p>
+
+                <h3>Contributing to the Advisory Report</h3>
+                <p>
+                    In addition to creating the prototype, I also contributed to the advisory report.
+                    In this role, I provided advice on specific topics, adjusted information where
+                    necessary, improved spelling, and added missing content – fulfilling a consulting
+                    role.
+                </p>
+
+                <p>
+                    While doing so, I also took analyses into account, including stakeholder analysis
+                    and the implementation of Society 5.0 user test results within the advisory report.
+                </p>
+
+                <h3>Future Plans</h3>
+                <p>
+                    In the future (after this project), I plan to further deepen my knowledge of ethics
+                    within ICT. Although my interest strongly lies in ethics, it is also a highly
+                    important topic in which I currently have limited knowledge.
+                </p>
+
+                <p>
+                    I aim to develop this knowledge through reliable and specialized information
+                    sources focused on ethics, such as:
+                </p>
+
+                <ul>
+                    <li>Rijksorganisatie voor Ontwikkeling, Digitalisering en Innovatie</li>
+                    <li>Google Scholar</li>
+                    <li>Kennisnet</li>
+                    <li>Other similar reliable sources</li>
+                </ul>
           </article>
         </div>
       </div>
